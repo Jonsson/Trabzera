@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">  
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head> 
+        <body>
+        <form method="post" action="#" id="formulario">
+            <fieldset id="fieldcontato"> 
+              <legend>Digite sua mensagem:</legend>
+                <p>
+                  <label id="modal">Nome:
+                    <input id="fullname" class="form-control" type="text" name="nome" size="55" required placeholder="Digite seu nome" autofocus>
+                  </label>
+                </p>
+                <p>
+                  <label id="modal">E-mail:
+                      <input id="email" class="form-control" type="email" name="email" size="55" required placeholder="Digite seu email">
+                  </label>
+                </p>       
+                <p>
+                  <label id="modal">Assunto:<br>
+                      <select id="assunto" name="assunto" class="custom-select" required>
+                              <option value="Dúvida">Dúvida</option>
+                              <option value="Sugestão">Sugestão</option>
+                              <option value="Outro assunto">Outro assunto</option>
+                      </select>
+                  </label>
+                </p>        
+                    <br><br>
+                <p> 
+                  <label id="modal">Mensagem:<br>
+                      <textarea id="textbox" class="form-control" cols="56" rows="10" required></textarea>
+                  </label> 
+                </p>           
+                        <br>
+                <p>
+                  <input id="enviar" type="submit" name="enviar" value="Enviar">
+                </p>
+            </fieldset>
+          </form>
+</body>
+</html>
