@@ -1,11 +1,13 @@
+
 <!DOCTYPE html>
 <html>
     <head>
     <meta charset="UTF-8">  
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="valida.js"></script>
     </head> 
         <body>
-        <form method="post" action="#" id="formulario">
+        <form method="post" action="calc.php" id="formulario" id="formCadastro" name="formulario" onsubmit="return validarSenha(this);" action="" method="POST">
             <fieldset id="fieldcontato"> 
               <legend>Digite sua mensagem:</legend>
                 <p>
@@ -13,30 +15,33 @@
                     <input id="fullname" class="form-control" type="text" name="nome" size="55" required placeholder="Digite seu nome" autofocus>
                   </label>
                 </p>
+
+                  <section class="cadastro">
+                    <article class="cadastro_area">
+
+                    <label id="modal" for="txtSenha">Senha</label>
+                    <input id="txtSenha" name="senha" type="password" required placeholder="Digite uma Senha" title="Senha" /><br>
+                    <label id="modal" for="repetir_senha">Confirmar Senha</label>
+                    <input id="repetir_senha" name="repetir_senha" type="password" required  placeholder="Repetir Senha" title="Repetir Senha" />
+            </article>
+        </section>
+
+                </p>    
                 <p>
-                  <label id="modal">E-mail:
-                      <input id="email" class="form-control" type="email" name="email" size="55" required placeholder="Digite seu email">
-                  </label>
-                </p>       
-                <p>
-                  <label id="modal">Assunto:<br>
-                      <select id="assunto" name="assunto" class="custom-select" required>
-                              <option value="Dúvida">Dúvida</option>
-                              <option value="Sugestão">Sugestão</option>
-                              <option value="Outro assunto">Outro assunto</option>
-                      </select>
+                  <label id="modal">Calculadora:<br><br>
+                    
+                    <input id="calculadora" type="number" name="txtv1" placeholder="Valor 1"><br>
+                        <select id="assunto" name="operacao">
+                            <option>+</option>
+                            <option>-</option>
+                            <option>*</option>
+                            <option>/</option>
+                        </select><br>
+                    <input id="calculadora" type="number" name="txtv2" placeholder="Valor 2"><br><br>
+
+                    <input id="enviar" type="submit" name="enviar" value="Calcular"><br><br>
                   </label>
                 </p>        
-                    <br><br>
-                <p> 
-                  <label id="modal">Mensagem:<br>
-                      <textarea id="textbox" class="form-control" cols="56" rows="10" required></textarea>
-                  </label> 
-                </p>           
-                        <br>
-                <p>
-                  <input id="enviar" type="submit" name="enviar" value="Enviar">
-                </p>
             </fieldset>
           </form>
 </body>
